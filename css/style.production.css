@@ -179,7 +179,48 @@ div {
 }
 
 .main-contact {
-    margin-left: 100px;
+    /* padding-left: 100px;
+    display: block;
+    margin: 0 auto; */
+    text-align: var(--text-center); 
+}
+
+.main-contact__address {
+    font-size: 18px;
+}
+
+.main-contact__firstlist {
+    position: relative;
+    left: 120px;
+    list-style-type: none; 
+}
+
+.main-contact__secondlist {
+    position: relative;
+    right: 110px;
+    bottom: 25px;
+    list-style-type: none; 
+}
+
+.main-contact__thirdlist {
+    position: relative;
+    right: 10px;
+    bottom: 25px;
+    list-style-type: none; 
+}
+
+.main-contact__contactme {
+    position: relative;
+    right: 20px;
+}
+
+.site-contact {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.main-contact__heading {
+    text-decoration: underline;
 }
 
 .main-about {
