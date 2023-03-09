@@ -1,17 +1,17 @@
 :root {
     /*colors*/
     --link-color: #357b70;
-    --linkvisted-color: #05676e;
-    --linkactive-color: #489c79;
-    --primarybutton-color: #2b2b2b;
-    --primarybuttontxt-color: #fff;
-    --secondarybuttonbg-color: #e0b354;
-    --griditem-color: #d3d3d3;
-    --keyframezeroper: #edc655;
-    --keyframefiftyper: #f76414;
-    --keyframehundredper: #ff0800;
+    --link-visited__color: #05676e;
+    --link-active__color: #489c79;
+    --primary-button__color: #2b2b2b;
+    --primary-button__txt-color: #fff;
+    --secondary-button__bg-color: #e0b354;
+    --grid-item__color: #d3d3d3;
+    --keyframe__zero: #edc655;
+    --keyframe__fifty: #f76414;
+    --keyframe__hundred: #ff0800;
     /*fonts*/
-    --headingfontweight: 700px;
+    --heading-font_weight: 700px;
     /*margins and padding*/
     --margin-one: 10px;
     --padding-one: 10px;
@@ -22,55 +22,48 @@ body {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 16px;
-    /* Sets the font size to 16px */
     line-height: 1.6;
-    /* Sets the line-height to 1.6 */
 }
 
 h1 {
     font-size: 30px;
-    font-weight: var(--headingfontweight);
+    font-weight: var(--heading-font_weight);
 }
 
 h2 {
     font-size: 24px;
-    font-weight: var(--headingfontweight);
+    font-weight: var(--heading-font_weight);
 }
 
 h3 {
     font-size: 18px;
-    font-weight: var(--headingfontweight);
+    font-weight: var(--heading-font_weight);
 }
 
 a {
     color: var(--link-color);
 }
 
-/*Note: the proper order is a:visited->a:hover->a:active*/
 
 a:visited {
-    /* visted link */
-    color: var(--linkvisted-color);
+    color: var(--link-visited__color);
 }
 
 a:hover,
 a:focus {
-    /*Note#1: :hover is activated when the user moves the mouse over their keyboard*/
-    /*Note#2: No underlining when hovering over a link */
-    /*Note#3: :focus is activated when an element is targeted by the keyboard.*/
     text-decoration: none;
 }
 
 a:active {
     /* selected link */
-    color: var(--linkactive-color);
+    color: var(--link-active__color);
 }
 
 button, .button {
     border: none;
     display: inline-block;
-    background-color: var(--primarybutton-color);
-    color: var(--primarybuttontxt-color);
+    background-color: var(--primary-button__color);
+    color: var(--primary-button__txt-color);
     font-family: inherit;
     font-size: 16px;
     text-decoration: none;
@@ -92,14 +85,13 @@ button:focus,
 }
 
 .button_secondary {
-    background-color: var(--secondarybuttonbg-color);
-    color: var(--primarybutton-color);
+    background-color: var(--secondary-button__bg-color);
+    color: var(--primary-button__color);
 }
 
 div {
     padding: var(--padding-one);
     margin: var(--margin-one);
-    /* border: 1px solid black; */
 }
 
 .profile__portrait {
@@ -114,6 +106,8 @@ div {
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin: 40px;
+    padding: 20px;
 }
 
 .profile {
@@ -142,11 +136,15 @@ div {
 
 .navigation-list {
     list-style-type: none; 
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
 }
 
-.nagivation-list li {
-    display: inline-block;
+.navigation-list li {
+    /* display: inline-block;
     margin-left: 15px;
+    float: right; */
 }
 
 .grid {
@@ -156,7 +154,7 @@ div {
 }
 
 .grid__item {
-    background-color: var(--griditem-color);
+    background-color: var(--grid-item__color);
     padding: 20px;
 }
 
@@ -190,9 +188,8 @@ div {
 }
 
 .site-contact {
-    max-width: 50px;
-    position: absolute;
-    margin: 485px;
+    max-width: 170px;
+    margin: 0 auto;
 }
 
 .main-contact__heading {
@@ -213,12 +210,6 @@ div {
 
 .work-section {
     padding-left: 100px;
-}
-
-.site-contact {
-    padding-left: 100px;
-    padding-bottom: 40px;
-    margin-top: 20px;
 }
 
 .grid__item:last-child {
@@ -254,13 +245,13 @@ div {
 /*all*/
 @keyframes color-change {
     0% {
-        fill: var(--keyframezeroper);
+        fill: var(--keyframe__zero);
     }
     50% {
-        fill: var(--keyframefiftyper);
+        fill: var(--keyframe__fifty);
     }
     100% {
-        fill: var(--keyframehundredper);
+        fill: var(--keyframe__hundred);
     }
 }
 
